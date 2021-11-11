@@ -7,15 +7,15 @@ json字符串的第一层只能有一个字段，这样才能正确获取到其�
 ```
 {"data":{"type":"object","properties":{"records":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","title":"名称"},"value":{"type":"number","title":"值"}},"required":["name","value"]},"title":"记录数组"}},"required":["records"]}},
 ```
-![](https://github.com/KingTortoise/yapi-json-model/blob/dfde1244e919bf78510978e3dbb1a6219987a4f8/img_redme/right.png)
+![](https://upload-images.jianshu.io/upload_images/2633493-f2809e90a14dc760.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ### 错误的json字符串
 ```
 {"data":{"type":"object","properties":{"records":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","title":"名称"},"value":{"type":"number","title":"值"}},"required":["name","value"]},"title":"记录数组"}},"required":["records"]},"total":{"type":"number","title":"总数"}}
 ```
-![](https://github.com/KingTortoise/yapi-json-model/blob/dfde1244e919bf78510978e3dbb1a6219987a4f8/img_redme/error.png)
+![](https://upload-images.jianshu.io/upload_images/2633493-55fed5fa81c21057.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 如何自动生成对应的model对象
 ### Json Model All
-![](https://github.com/KingTortoise/yapi-json-model/blob/dfde1244e919bf78510978e3dbb1a6219987a4f8/img_redme/jsonModelAll.gif)
+![](https://upload-images.jianshu.io/upload_images/2633493-ead06bf05709238c.gif?imageMogr2/auto-orient/strip)
 ### Json Model Select
-![](https://github.com/KingTortoise/yapi-json-model/blob/dfde1244e919bf78510978e3dbb1a6219987a4f8/img_redme/jsonModelSelect.gif)
+![](https://upload-images.jianshu.io/upload_images/2633493-916199c33a56900c.gif?imageMogr2/auto-orient/strip)
