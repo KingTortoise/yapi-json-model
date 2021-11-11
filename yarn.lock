@@ -137,10 +137,10 @@
   resolved "https://nexus.sobeter.com/repository/dist/@types/node/-/node-14.17.33.tgz#011ee28e38dc7aee1be032ceadf6332a0ab15b12"
   integrity sha1-AR7ijjjceu4b4DLOrfYzKgqxWxI=
 
-"@types/vscode@^1.62.0":
-  version "1.62.0"
-  resolved "https://nexus.sobeter.com/repository/dist/@types/vscode/-/vscode-1.62.0.tgz#b4d6d192d5aeb75e91d0adef689c3ecef9879da7"
-  integrity sha1-tNbRktWut16R0K3vaJw+zvmHnac=
+"@types/vscode@1.60.0":
+  version "1.60.0"
+  resolved "https://nexus.sobeter.com/repository/dist/@types/vscode/-/vscode-1.60.0.tgz#9330c317691b4f53441a18b598768faeeb71618a"
+  integrity sha1-kzDDF2kbT1NEGhi1mHaPrutxYYo=
 
 "@typescript-eslint/eslint-plugin@^4.31.1":
   version "4.33.0"
