@@ -9,6 +9,7 @@
 		"json",
 		"model"
 	],
+	"icon": "img_redme/extension_icon.png",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
