@@ -3,7 +3,7 @@
 	"displayName": "yapi-json-model",
 	"description": "根据yapi生成的json自动转换为model对象",
 	"version": "0.0.1",
-	"publisher": "jinwenuw",
+	"publisher": "jinwenwu",
 	"keywords": [
 		"yapi",
 		"json",
