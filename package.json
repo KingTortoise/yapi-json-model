@@ -1,10 +1,14 @@
 {
-  "name": "yapi-json-model",
+	"name": "yapi-json-model",
 	"displayName": "yapi-json-model",
 	"description": "根据yapi生成的json自动转换为model对象",
 	"version": "0.0.1",
-	"publisher":"jinwenuw",
-	"keywords": ["yapi", "json", "model"],
+	"publisher": "jinwenuw",
+	"keywords": [
+		"yapi",
+		"json",
+		"model"
+	],
 	"engines": {
 		"vscode": "^1.62.0"
 	},
@@ -12,8 +16,8 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:yapi-json-model.jsonModelAll",
-        "onCommand:yapi-json-model.jsonModelSelect"
+		"onCommand:yapi-json-model.jsonModelAll",
+		"onCommand:yapi-json-model.jsonModelSelect"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -21,12 +25,13 @@
 			{
 				"command": "yapi-json-model.jsonModelAll",
 				"title": "Json Model All"
-			},{
+			},
+			{
 				"command": "yapi-json-model.jsonModelSelect",
 				"title": "Json Model Select"
 			}
 		],
-		"menus":{
+		"menus": {
 			"editor/context": [
 				{
 					"when": "editorFocus",
@@ -53,28 +58,31 @@
 		"test": "node ./out/test/runTest.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.62.0",
 		"@types/glob": "^7.1.4",
 		"@types/mocha": "^9.0.0",
 		"@types/node": "14.x",
+		"@types/vscode": "^1.62.0",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
+		"@vscode/test-electron": "^1.6.2",
+		"class-transformer": "0.4.0",
 		"eslint": "^7.32.0",
 		"glob": "^7.1.7",
 		"mocha": "^9.1.1",
-		"typescript": "^4.4.3",
 		"ts-loader": "^9.2.5",
+		"typescript": "^4.4.3",
 		"webpack": "^5.52.1",
-		"webpack-cli": "^4.8.0",
-		"@vscode/test-electron": "^1.6.2",
-		"class-transformer":"0.4.0"
+		"webpack-cli": "^4.8.0"
 	},
 	"bugs": {
-        "url": "https://github.com/KingTortoise/yapi-json-model/issues"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/KingTortoise/yapi-json-model"
-    },
-    "homepage": "https://github.com/KingTortoise/yapi-json-model/blob/main/README.md"
+		"url": "https://github.com/KingTortoise/yapi-json-model/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/KingTortoise/yapi-json-model"
+	},
+	"homepage": "https://github.com/KingTortoise/yapi-json-model/blob/main/README.md",
+	"dependencies": {
+		"vsce": "^2.2.0"
+	}
 }
