@@ -2,7 +2,7 @@
  * @Author: jinwenwu
  * @Date: 2021-11-09 15:04:01
  * @LastEditors: jinwenwu
- * @LastEditTime: 2021-11-11 10:18:03
+ * @LastEditTime: 2021-11-11 20:28:26
  * @Description: 工具类
  */
 const utils = {
@@ -58,7 +58,10 @@ const utils = {
     const keys = Object.keys(obj);
     if (keys.length === 1) {
       const subObj = obj[keys[0]];
-      if (subObj.type && subObj.type === "object") {
+      if (
+        subObj.type &&
+        (subObj.type === "object" || subObj.type === "array")
+      ) {
         return true;
       }
     }
@@ -87,9 +90,25 @@ const utils = {
     let resultText = "";
     const keys = Object.keys(obj);
     const subObj = obj[keys[0]];
-    const nextObj = subObj.properties;
-    const objStr = this.createDtoStr(keys[0], nextObj);
-    resultText += `${objStr} \n`;
+    if (subObj.type === "object") {
+      const nextObj = subObj.properties;
+      const objStr = this.createDtoStr(keys[0], nextObj);
+      resultText += `${objStr} \n`;
+    } else if (subObj.type === "array") {
+      const itemObj = subObj.items;
+      resultText = `export class ${keys[0]}Dto { \n`;
+      if (itemObj.type === "object") {
+        resultText += `@Type(() => ItemsDto) \n`;
+        resultText += `public items?: ItemsDto;\n`;
+        resultText += `} \n`;
+        const objStr = this.createDtoStr("items", itemObj.properties);
+        resultText += `${objStr} \n`;
+      } else {
+        resultText += `public items?: ${itemObj.type}[]; \n`;
+        resultText += `} \n`;
+      }
+    }
+
     return resultText;
   },
 
